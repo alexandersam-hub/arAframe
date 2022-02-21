@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+<script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v5.0.1/dist/aframe-extras.min.js" ></script>
+<!--<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>-->
+<!--<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>-->
+<!--<script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>-->
+<body style="margin : 0px; overflow: hidden;">
+<a-scene>
+
+    <a-assets>
+        <video  id="vid" preload="auto" muted playsinline controls autoplay loop src="videos/people.mp4"></video>
+<!--        p src="https://arjs-cors-proxy.herokuapp.com/https://www.w3schools.com/html/mov_bbb.mp4"></video>-->
+
+        <!-- Model source: https://sketchfab.com/3d-models/spinosaurus-2135501583704537907645bf723685e7
+             Model author: https://sketchfab.com/VapTor
+             Model license: CC Attribution -->
+        <a-asset-item id="bird" src="https://cdn.glitch.com/324a5290-5aa7-4efc-92d6-ae0736433b12%2Fspinosaurus.glb" response-type="arraybuffer"></a-asset-item>
+    </a-assets>
+
+    <a-marker preset="hiro">
+
+            <a-entity scale="0.5 0.5 0.5" position="0 0 0" rotation="-60 0 90"
+                      gltf-model="#bird"
+                      animation-mixer
+            ></a-entity>
+
+    </a-marker >
+
+
+
+        <a-marker preset="kanji">
+<!--            <a-video position="0 2 -10" muted="muted" controls autoplay="autoplay" id="vid" loop src="./v1.mp4"></a-video>-->
+<!--            <a-video src="#vid"  rotation="-60 0 90"></a-video>-->
+            <a-video src="#vid" position="0 0 0" rotation="-60 0 0" ></a-video>
+        </a-marker>
+
+
+    <a-camera position="0 1.2 0"></a-camera>
+
+    <!-- 2D environment omitted for simplicity -->
+
+
+
+    <!-- Lights configuration omitted for simplicity -->
+</a-scene>
+</body>
+</html>
+
+<!--<a-entity-->
+<!--        gltf-model="#bird"-->
+<!--        position="-1 0.5 -3"-->
+<!--        scale="0.01 0.01 0.01"-->
+<!--        animation-mixer="clip:Take 001; loop:2; timeScale: 1; crossFadeDuration: 1"></a-entity>-->

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
+<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+
+<body style="margin : 0px; overflow: hidden;">
+<a-scene embedded arjs>
+<!--    <a-marker preset="hiro">-->
+<!--        <a-entity-->
+<!--                position="0 0 0"-->
+<!--                scale="0.005 0.005 0.005"-->
+<!--                gltf-model="https://arjs-cors-proxy.herokuapp.com/http://k902696v.beget.tech/models/scene.gltf"-->
+<!--                animation-mixer="clip:Take 001; loop:2; timeScale: 1; crossFadeDuration: 1"></a-entity>-->
+<!--        &lt;!&ndash;                gltf-model="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf"&ndash;&gt;-->
+
+
+<!--    </a-marker>-->
+<!--    <a-marker preset="hiro">-->
+<!--        <a-entity-->
+<!--                position="0 0 0"-->
+<!--                scale="0.007 0.007 0.007"-->
+<!--                gltf-model="./models/mech/scene.gltf"-->
+<!--               ></a-entity>-->
+<!--&lt;!&ndash;                gltf-model="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf"&ndash;&gt;-->
+
+
+<!--    </a-marker>-->
+
+<!--    <a-marker type='pattern' url='./r2.patt'>-->
+<!--        <a-box position='0 0.5 0' material='color: red;'></a-box>-->
+<!--    </a-marker>-->
+
+    <a-nft
+            type="nft"
+            url="./nft/potter/harry"
+            smooth="true"
+            smoothCount="10"
+            smoothTolerance=".01"
+            smoothThreshold="5"
+    >
+        <a-entity
+                position="0 0 0"
+                scale="0.005 0.005 0.005"
+                gltf-model="./models/mech/scene.gltf"
+                animation="clip:Take 001; loop:2; timeScale: 1; crossFadeDuration: 1"></a-entity>
+    </a-nft>
+    <a-entity camera></a-entity>
+</a-scene>
+</body>
+</html>
